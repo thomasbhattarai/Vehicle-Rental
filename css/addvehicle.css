@@ -1,0 +1,560 @@
+/* Reset and global styles with premium typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 1080px; /* Adjusted to fit 1080px height */
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Cancel Button with enhanced styling */
+#back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(90deg, #e74c3c, #e74c3c);
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    z-index: 1000;
+}
+
+#back:hover {
+    background: linear-gradient(90deg, #c0392b, #c0392b);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(192, 57, 43, 0.4);
+}
+
+#back a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main content with a more sophisticated look */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Adjusted to fit within 1920px width */
+    height: auto; /* Let the height adjust automatically */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.register {
+    width: 100%;
+}
+
+.register h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #6c5ce7;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+form#register {
+    display: flex;
+    flex-direction: column;
+}
+
+form#register label {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #a29bfe;
+}
+
+form#register input {
+    margin-bottom: 25px;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensure inputs take full width of the form */
+}
+
+form#register input:focus {
+    outline: none;
+    border-color: #6c5ce7;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+    transform: scale(1.02);
+}
+
+form#register input[type="submit"].btnn {
+    background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    padding: 18px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+}
+
+form#register input[type="submit"].btnn:hover {
+    background: linear-gradient(90deg, #5a4ed1, #8e83ff);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+}
+
+/* Styling for file input to make it look more like a button */
+form#register input[type="file"] {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+form#register input[type="file"]::before {
+    content: 'Choose Image';
+    display: inline-block;
+    background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+    border: none;
+    padding: 18px 30px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+    border-radius: 10px;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+}
+
+form#register input[type="file"]:hover::before {
+    background: linear-gradient(90deg, #5a4ed1, #8e83ff);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+}
+
+form#register input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+form#register input[type="file"]::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 1920px) {
+    .main {
+        max-width: 500px; /* Adjust for smaller width within 1920px */
+    }
+}
+
+@media (max-width: 1080px) {
+    body {
+        min-height: 100vh; /* Adjust for smaller screens */
+    }
+    
+    .main {
+        padding: 20px;
+    }
+
+    form#register input, 
+    form#register input[type="submit"].btnn,
+    form#register input[type="file"]::before {
+        padding: 15px;
+    }
+
+    .register h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        width: 100%;
+        padding: 15px;
+    }
+
+    form#register input, 
+    form#register input[type="submit"].btnn,
+    form#register input[type="file"]::before {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .register h2 {
+        font-size: 1.5em;
+    }
+    
+    #back {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Enhanced accessibility */
+:focus-visible {
+    outline: 2px solid #6c5ce7;
+    outline-offset: 3px;
+    border-radius: 8px;
+}
+
+/* Subtle animation for form inputs when typing */
+form#register input:not([type="submit"]):not([type="file"]):not(:focus):not(:placeholder-shown) {
+    animation: typing 0.7s ease-out;
+}
+
+@keyframes typing {
+    from { box-shadow: 0 0 0 0 rgba(108, 92, 231, 0.2); }
+    to { box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2); }
+}
+
+/* Error message styling if you want to add error handling */
+.error-message {
+    color: #ff4757;
+    font-size: 0.9em;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.error-message.show {
+    opacity: 1;
+}
+
+/* Success message styling for form submission feedback */
+.success-message {
+    color: #00ff88;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 255, 136, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: scale(0.9);
+}
+
+.success-message.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Placeholder text styling for better visibility */
+form#register input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    opacity: 1; /* For Firefox */
+}
+
+form#register input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.4);
+}
+
+form#register input::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Final touches for overall page aesthetics */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent);
+    pointer-events: none;
+}
+
+/* Additional hover effect for the main content container */
+.main:hover {
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+/* Ensuring the form box fits well within 1920x1080px */
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+    body {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .main {
+        max-width: 600px; /* Keeps the form box centered and sized appropriately */
+        width: 30%; /* Relative to the screen width for larger screens */
+        height: auto;
+        padding: 40px;
+    }
+}
+
+/* Ensuring responsiveness for smaller screens */
+@media screen and (max-width: 1920px) {
+    .main {
+        max-width: 500px; /* Adjusts for screens smaller than 1920px */
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    body {
+        min-height: 100vh; /* Adjusts for screens smaller than 1080px height */
+    }
+    
+    .main {
+        padding: 20px;
+    }
+
+    form#register input, 
+    form#register input[type="submit"].btnn,
+    form#register input[type="file"]::before {
+        padding: 15px;
+    }
+
+    .register h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        width: 90%; /* Wider on tablets */
+        padding: 15px;
+    }
+
+    form#register input, 
+    form#register input[type="submit"].btnn,
+    form#register input[type="file"]::before {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .register h2 {
+        font-size: 1.5em;
+    }
+    
+    #back {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        width: 100%; /* Full width on mobile */
+        padding: 10px;
+    }
+
+    form#register input, 
+    form#register input[type="submit"].btnn,
+    form#register input[type="file"]::before {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .register h2 {
+        font-size: 1.3em;
+    }
+    
+    #back {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+
+/* Additional subtle animations */
+form#register input[type="text"]:focus, 
+form#register input[type="number"]:focus {
+    animation: pulse 1s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.01); }
+    100% { transform: scale(1); }
+}
+
+/* Final touch for visual hierarchy with a subtle border */
+form#register input, 
+form#register input[type="submit"].btnn,
+form#register input[type="file"]::before {
+    border: 1px solid rgba(108, 92, 231, 0.2);
+}
+
+/* Subtle glow effect for form inputs when focused */
+form#register input:focus {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(108, 92, 231, 0.2), 0 0 20px rgba(108, 92, 231, 0.1);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(108, 92, 231, 0.4), 0 0 30px rgba(108, 92, 231, 0.2);
+    }
+}
+
+/* Enhancing the visual feedback for form submission */
+form#register input[type="submit"].btnn:active {
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 2px 10px rgba(108, 92, 231, 0.5);
+}
+
+/* Adding a subtle visual cue for required fields */
+form#register label::after {
+    content: ' *';
+    color: #ff4757;
+    font-size: 1em;
+}
+
+/* Final touch for the overall page layout */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 1080px; /* Ensures the body covers the full height of 1080px */
+    width: 100%;
+    padding: 20px;
+    overflow: auto; /* Allows scrolling if content exceeds 1080px */
+}
+
+/* Ensuring the form box fits well within 1920x1080px for larger screens */
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+    .main {
+        max-width: 600px;
+        width: 30%; /* Adjusts width relative to screen size */
+        height: auto;
+        padding: 40px;
+    }
+}
+
+/* Ensuring responsiveness for smaller screens */
+@media screen and (max-width: 1920px) {
+    .main {
+        max-width: 500px; /* Adjusts for screens smaller than 1920px */
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    body {
+        min-height: 100vh; /* Adjusts body height for smaller screens */
+    }
+    
+    .main {
+        padding: 20px;
+    }
+
+    form#register input, 
+    form#register input[type="submit"].btnn,
+    form#register input[type="file"]::before {
+        padding: 15px;
+    }
+
+    .register h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        width: 90%; /* Wider on tablets */
+        padding: 15px;
+    }
+
+    form#register input, 
+    form#register input[type="submit"].btnn,
+    form#register input[type="file"]::before {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .register h2 {
+        font-size: 1.5em;
+    }
+    
+    #back {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        width: 100%; /* Full width on mobile */
+        padding: 10px;
+    }
+
+    form#register input, 
+    form#register input[type="submit"].btnn,
+    form#register input[type="file"]::before {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .register h2 {
+        font-size: 1.3em;
+    }
+    
+    #back {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+
+/* Final accessibility enhancement */
+form#register input:focus-visible {
+    outline: 2px solid #6c5ce7;
+    outline-offset: 3px;
+    border-radius: 10px;
+}
